@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tampilan PIN ATM</title>
+    <link rel="stylesheet" href="style2.css" />
+    <!-- Menghubungkan file CSS eksternal -->
+  </head>
+  <body>
+    <div class="container">
+      <form id="pinForm">
+        <h3>Tanggal Jadian Kitaaa</h3>
+        <input class="pin-input" type="number" maxlength="1" id="digit1" />
+        <input class="pin-input" type="number" maxlength="1" id="digit2" />
+        <input class="pin-input" type="number" maxlength="1" id="digit3" />
+        <input class="pin-input" type="number" maxlength="1" id="digit4" />
+        <p></p>
+        <button type="button" onclick="validatePin()">Submit</button>
+      </form>
+    </div>
+
+    <script>
+      function validatePin() {
+        // Ambil nilai dari masing-masing input
+        var digit1 = document.getElementById("digit1").value;
+        var digit2 = document.getElementById("digit2").value;
+        var digit3 = document.getElementById("digit3").value;
+        var digit4 = document.getElementById("digit4").value;
+
+        // Gabungkan nilai input menjadi PIN
+        var pin = digit1 + digit2 + digit3 + digit4;
+
+        // Contoh PIN yang benar
+        var correctPin = "1824"; // Ganti dengan PIN yang sesuai
+
+        // Validasi PIN
+        if (pin === correctPin) {
+          // Jika PIN benar, alihkan ke halaman berikutnya
+          window.location.href = "pacar.html";
+        } else {
+          // Jika PIN salah, beri pesan kesalahan
+          alert("PIN salah. Silakan coba lagi.");
+          // Kosongkan input
+          document.getElementById("pinForm").reset();
+        }
+      }
+    </script>
+  </body>
+</html>

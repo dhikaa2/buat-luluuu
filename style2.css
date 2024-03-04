@@ -1,0 +1,35 @@
+/* CSS untuk menyesuaikan tampilan */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Tinggi 100% dari viewport */
+}
+h3 {
+  text-align: center;
+}
+.pin-input {
+  font-size: 24px; /* Ukuran font */
+  padding: 10px; /* Padding */
+  width: 50px; /* Lebar input */
+  text-align: center; /* Posisi teks */
+  border: 2px solid #ccc; /* Border */
+  border-radius: 5px; /* Sudut bulatan */
+  outline: none; /* Menghilangkan outline saat di-focus */
+  margin-right: 10px; /* Jarak antar input */
+}
+
+button {
+  margin-left: 130px;
+  margin-top: 20px;
+  background-color: #f6eb9a; /* Warna latar belakang */
+  color: black; /* Warna teks */
+  border: none; /* Menghilangkan border */
+  padding: 10px 20px; /* Padding */
+  border-radius: 5px; /* Sudut bulatan */
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: burlywood; /* Warna latar belakang saat hover */
+}
